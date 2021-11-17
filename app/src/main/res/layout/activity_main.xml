@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/tvhasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:padding="40dp"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/operasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tvhasil" />
+
+
+    <Button
+        android:id="@+id/btn_ce"
+        style="@style/button_operation"
+        android:text="CE"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/operasi" />
+
+    <Button
+        android:id="@+id/tanda"
+        style="@style/button_operation"
+        android:text="+/-"
+        app:layout_constraintEnd_toStartOf="@+id/persen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_ce"
+        app:layout_constraintTop_toBottomOf="@id/operasi" />
+
+    <Button
+        android:id="@+id/persen"
+        style="@style/button_operation"
+        android:text="%"
+        app:layout_constraintEnd_toStartOf="@+id/bagi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tanda"
+        app:layout_constraintTop_toBottomOf="@id/operasi" />
+
+    <Button
+        android:id="@+id/bagi"
+        style="@style/button_operation"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/persen"
+        app:layout_constraintTop_toBottomOf="@id/operasi" />
+
+    <Button
+        android:id="@+id/kali"
+        style="@style/button_operation"
+        android:text="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sembilan"
+        app:layout_constraintTop_toBottomOf="@id/bagi" />
+
+    <Button
+        android:id="@+id/kurang"
+        style="@style/button_operation"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enam"
+        app:layout_constraintTop_toBottomOf="@id/kali" />
+
+
+    <Button
+        android:id="@+id/tambah"
+        android:layout_width="@dimen/ukuran80"
+        android:layout_height="0dp"
+        android:text="+"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/hasil"
+        app:layout_constraintEnd_toEndOf="@id/kurang"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/kurang"
+        app:layout_constraintTop_toTopOf="@id/tiga"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/tujuh"
+        style="@style/button_angka"
+        android:text="7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_ce" />
+
+
+    <Button
+        android:id="@+id/delapan"
+        style="@style/button_angka"
+        android:layout_marginStart="0dp"
+        android:text="8"
+        app:layout_constraintStart_toStartOf="@+id/tanda"
+        app:layout_constraintTop_toBottomOf="@+id/tanda" />
+
+    <Button
+        android:id="@+id/sembilan"
+        style="@style/button_angka"
+        android:layout_marginStart="0dp"
+        android:text="9"
+        app:layout_constraintStart_toStartOf="@+id/persen"
+        app:layout_constraintTop_toBottomOf="@id/persen" />
+
+    <Button
+        android:id="@+id/empat"
+        style="@style/button_angka"
+        android:layout_margin="@dimen/margin_button"
+        android:layout_marginStart="0dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tujuh" />
+
+    <Button
+        android:id="@+id/lima"
+        style="@style/button_angka"
+        android:layout_margin="@dimen/margin_button"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@+id/enam"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/empat"
+        app:layout_constraintTop_toBottomOf="@id/delapan" />
+
+    <Button
+        android:id="@+id/enam"
+        style="@style/button_angka"
+        android:layout_marginStart="0dp"
+        android:text="6"
+        app:layout_constraintStart_toStartOf="@+id/sembilan"
+        app:layout_constraintTop_toBottomOf="@id/sembilan" />
+
+    <Button
+        android:id="@+id/satu"
+        style="@style/button_angka"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/empat" />
+
+    <Button
+        android:id="@+id/dua"
+        style="@style/button_angka"
+        android:layout_marginStart="0dp"
+        android:text="2"
+        app:layout_constraintStart_toStartOf="@+id/lima"
+        app:layout_constraintTop_toBottomOf="@id/empat" />
+
+    <Button
+        android:id="@+id/tiga"
+        style="@style/button_angka"
+        android:layout_marginStart="0dp"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="@+id/enam"
+        app:layout_constraintTop_toBottomOf="@+id/enam" />
+
+    <Button
+        android:id="@+id/nol"
+        style="@style/button_angka"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/satu" />
+
+    <Button
+        android:id="@+id/titik"
+        style="@style/button_angka"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@+id/hasil"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nol"
+        app:layout_constraintTop_toBottomOf="@id/tiga" />
+
+    <Button
+        android:id="@+id/hasil"
+        style="@style/button_operation"
+        android:layout_margin="@dimen/margin_button"
+        android:text="="
+        app:layout_constraintEnd_toStartOf="@+id/tambah"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/titik"
+        app:layout_constraintTop_toBottomOf="@id/tiga" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
